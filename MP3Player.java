@@ -65,7 +65,7 @@ public class MP3Player {
          */
         char command = ' ';
         while (command != 'q') {
-            String s = null;
+            String s;
             s = sc.next();
             command = s.charAt(0);
 
@@ -106,8 +106,8 @@ public class MP3Player {
                 println("q = Quit the player.");
             }
             if (command == 'i') {
-                AudioSource as = null;
-                int i = -1;
+                AudioSource as;
+                int i;
 
                 try {
                     String iv = s.substring(1).trim();
@@ -115,7 +115,7 @@ public class MP3Player {
                 } catch (Exception e) {
                     i = -1; // no integer argument.
                 }
-                ;
+
                 if (i < 0) {
                     i = pl.getSourceIndex();
                 }
@@ -138,7 +138,7 @@ public class MP3Player {
                 }
             }
             if (command == 'p') {
-                int i = 0;
+                int i;
                 try {
                     String iv = s.substring(1).trim();
                     i = Integer.parseInt(iv);
